@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WhatsApp Message Scheduler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>WhatsApp Message Scheduler</h1>
+    <p class="hint">
+      Phone must be international format starting with <b>+</b> (example: <b>+905514809608</b>).
+    </p>
+
+    <label>
+      Phone Number
+      <input id="phone" type="text" placeholder="+90 551 480 96 08" autocomplete="off" />
+    </label>
+
+    <label>
+      Message
+      <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
+    </label>
+
+    <div class="row">
+      <label>
+        Hour (0–23)
+        <input id="hour" type="number" min="0" max="23" placeholder="19" />
+      </label>
+
+      <label>
+        Minute (0–59)
+        <input id="minute" type="number" min="0" max="59" placeholder="30" />
+      </label>
+    </div>
+
+    <button id="btn">Schedule</button>
+
+    <pre id="output" class="output">Ready.</pre>
+
+    <div class="notes">
+      <p><b>Notes:</b></p>
+      <ul>
+        <li>This runs on your computer (Flask + browser).</li>
+        <li>WhatsApp Web must be logged in.</li>
+        <li>Choose a time at least 1–2 minutes in the future.</li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
